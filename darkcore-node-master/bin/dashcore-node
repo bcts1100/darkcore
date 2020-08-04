@@ -1,0 +1,4 @@
+#!/usr/bin/env node
+
+var darkcore = require('../lib/cli/darkcore');
+darkcore();
