@@ -4,7 +4,7 @@ var path = require('path');
 var async = require('async');
 var spawn = require('child_process').spawn;
 
-var DarkdRPC = require('@darkevo/darksagad-rpc');
+var darksagadRPC = require('@darkevo/darksagad-rpc');
 var rimraf = require('rimraf');
 var darkcore = require('@darkevo/darkcore-lib');
 var chai = require('chai');
@@ -67,7 +67,7 @@ describe('Dark Cluster', function() {
 
         var process = spawn(execPath, opts, {stdio: 'inherit'});
 
-        var client = new DarkdRPC({
+        var client = new darksagadRPC({
           protocol: 'http',
           host: '127.0.0.1',
           port: nodeConf.rpcport,
